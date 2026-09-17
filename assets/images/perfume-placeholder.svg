@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fff8dc"/><stop offset=".45" stop-color="#caa45a"/><stop offset="1" stop-color="#171717"/></linearGradient>
+    <radialGradient id="r" cx=".5" cy=".25" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".65"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="900" fill="#111"/>
+  <circle cx="400" cy="320" r="310" fill="url(#r)"/>
+  <path d="M330 150h140v70H330z" fill="#d8b45f"/>
+  <path d="M285 220h230v85H285z" rx="20" fill="#080808" stroke="#caa45a" stroke-width="10"/>
+  <path d="M220 320h360l55 420c8 62-40 115-103 115H268c-63 0-111-53-103-115l55-420z" fill="url(#g)" stroke="#f3d48a" stroke-width="12"/>
+  <rect x="270" y="470" width="260" height="170" rx="18" fill="#090909" opacity=".86" stroke="#f3d48a" stroke-width="5"/>
+  <text x="400" y="545" fill="#f3d48a" text-anchor="middle" font-family="Georgia" font-size="44">ScentHub</text>
+  <text x="400" y="595" fill="#fff" text-anchor="middle" font-family="Arial" font-size="22">Luxury Perfume</text>
+</svg>
