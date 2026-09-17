@@ -282,39 +282,6 @@ http://localhost/scenthub/
 
 ---
 
-## Screenshots
-
-Screenshots of the project interface can be added here.
-
-### Home Page
-
-*Add screenshot here.*
-
-### Product Listing
-
-*Add screenshot here.*
-
-### Product Details
-
-*Add screenshot here.*
-
-### Shopping Cart
-
-*Add screenshot here.*
-
-### Checkout
-
-*Add screenshot here.*
-
-### Admin Dashboard
-
-*Add screenshot here.*
-
-### Product Management
-
-*Add screenshot here.*
-
----
 
 ## Main System Modules
 
