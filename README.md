@@ -191,7 +191,8 @@ scenthub/
 ├── assets/
 │   ├── css/
 │   ├── js/
-│   └── images/
+│   ├── images/
+│   └── uploads/
 │
 ├── config/
 │   └── db.php
@@ -207,7 +208,6 @@ scenthub/
 ├── login.php
 ├── register.php
 ├── contact.php
-├── review.php
 ├── esewa_demo.php
 ├── khalti_demo.php
 └── index.php
@@ -280,41 +280,37 @@ Open:
 http://localhost/scenthub/
 ```
 
----
-
 ## Screenshots
-
-Screenshots of the project interface can be added here.
 
 ### Home Page
 
-*Add screenshot here.*
+![Home Page](assets/Screenshots/image.png)
 
 ### Product Listing
 
-*Add screenshot here.*
+![Product Listing](assets/Screenshots/image-4.png)
 
 ### Product Details
 
-*Add screenshot here.*
+![Product Details](assets/Screenshots/image-2.png)
 
 ### Shopping Cart
 
-*Add screenshot here.*
+![Shopping Cart](assets/Screenshots/image-1.png)
 
 ### Checkout
 
-*Add screenshot here.*
+![Checkout](assets/Screenshots/image-3.png)
 
 ### Admin Dashboard
 
-*Add screenshot here.*
+![Admin Dashboard](assets/Screenshots/image-5.png)
 
 ### Product Management
 
-*Add screenshot here.*
+![Product Management](assets/Screenshots/image-6.png)
 
----
+'''
 
 ## Main System Modules
 
@@ -402,9 +398,7 @@ The project focuses on implementing common e-commerce workflows such as authenti
 
 ---
 
-
 **Rudra Bahadur Karki**
-
 
 ---
 
