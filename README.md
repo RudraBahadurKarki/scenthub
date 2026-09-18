@@ -282,35 +282,37 @@ http://localhost/scenthub/
 
 ## Screenshots
 
+Screenshots of the project interface can be added here.
+
 ### Home Page
 
-![Home Page](assets/Screenshots/image.png)
+*Add screenshot here.*
 
 ### Product Listing
 
-![Product Listing](assets/Screenshots/image-4.png)
+*Add screenshot here.*
 
 ### Product Details
 
-![Product Details](assets/Screenshots/image-2.png)
+*Add screenshot here.*
 
 ### Shopping Cart
 
-![Shopping Cart](assets/Screenshots/image-1.png)
+*Add screenshot here.*
 
 ### Checkout
 
-![Checkout](assets/Screenshots/image-3.png)
+*Add screenshot here.*
 
 ### Admin Dashboard
 
-![Admin Dashboard](assets/Screenshots/image-5.png)
+*Add screenshot here.*
 
 ### Product Management
 
-![Product Management](assets/Screenshots/image-6.png)
+*Add screenshot here.*
 
-'''
+---
 
 ## Main System Modules
 
