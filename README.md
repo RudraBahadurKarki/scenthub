@@ -280,7 +280,6 @@ Open:
 http://localhost/scenthub/
 ```
 
-<<<<<<< HEAD
 ## Screenshots
 
 ### Home Page
@@ -311,11 +310,7 @@ http://localhost/scenthub/
 
 ![Product Management](assets/Screenshots/image-6.png)
 
-'''
-=======
 ---
-
->>>>>>> f5353cd87b7c2a65cb581b04e357e431e08457be
 
 ## Main System Modules
 
