@@ -246,15 +246,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             throw new Error("Payment failed.");
         }
 
-        document.getElementById("paymentSection").style.display = "none";
-        document.getElementById("successBox").style.display = "block";
+                setTimeout(function () {
 
-        setTimeout(function () {
-            if (window.opener && !window.opener.closed) {
-                window.opener.paymentCompleted();
-            }
+            document.getElementById("paymentSection").style.display = "none";
+            document.getElementById("successBox").style.display = "block";
 
-            window.close();
+            setTimeout(function () {
+
+                if (window.opener && !window.opener.closed) {
+                    window.opener.paymentCompleted();
+                }
+
+                window.close();
+
+            }, 1500);
+
         }, 1800);
 
     } catch (error) {

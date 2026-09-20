@@ -414,17 +414,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
+                    setTimeout(function () {
+
                     document.getElementById(
                         "paymentSection"
                     ).style.display = "none";
 
-
-
                     document.getElementById(
                         "successBox"
                     ).style.display = "block";
-
-
 
                     setTimeout(function () {
 
@@ -439,7 +437,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         window.close();
 
-                    }, 1800);
+                    }, 1500);
+
+                }, 1800);
 
                 } catch (error) {
 
