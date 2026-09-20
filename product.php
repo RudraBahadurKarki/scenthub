@@ -136,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['review'])) {
          JOIN orders o ON oi.order_id = o.id
          WHERE o.user_id=?
          AND oi.product_id=?
-         AND o.status='Delivered'
+         AND o.status='ed'
          LIMIT 1"
     );
 
@@ -286,10 +286,15 @@ $related = fetch_all($conn, "SELECT p.*, b.name brand, c.name category FROM prod
                     <span><i class="bi bi-shield-check"></i> Authentic edit</span>
                     <span><i class="bi bi-gift"></i> Gift-ready</span>
                 </div>
-                <p class="stock">
-
-
-                    <?php echo $product['stock'] > 0 ? 'In stock: ' . (int) $product['stock'] : 'Out of stock'; ?>
+                <p class="stock"> <?php
+                    if ($product['stock'] <= 0) {
+                        echo 'Out of stock';
+                    } elseif ($product['stock'] <= 3) {
+                        echo 'Only ' . (int) $product['stock'] . ' left in stock';
+                    } else {
+                        echo 'In stock';
+                    }
+                    ?>
                 </p>
                 <form method="post" class="d-flex gap-2 detail-actions">
                     <input type="hidden"
