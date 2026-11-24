@@ -6,6 +6,41 @@ $page_title = 'Orders';
 
 include 'includes/header.php';
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    verify_csrf();
+
+    $orderId = (int) $_POST['id'];
+    $status = $_POST['status'];
+
+    $allowedStatuses = [
+        'Pending',
+        'Processing',
+        'Shipped',
+        'Delivered',
+        'Cancelled'
+    ];
+
+    if (in_array($status, $allowedStatuses, true)) {
+
+        $stmt = mysqli_prepare(
+            $conn,
+            "UPDATE orders SET status=? WHERE id=?"
+        );
+
+        mysqli_stmt_bind_param($stmt, "si", $status, $orderId);
+
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+
+        redirect('orders.php?id=' . $orderId . '&updated=1');
+
+    } else {
+        flash('danger', 'Invalid order status.');
+        redirect('orders.php?id=' . $orderId);
+    }
+}
+
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 $updated = isset($_GET['updated']);
 
@@ -20,18 +55,11 @@ $orderStmt = mysqli_prepare(
     $conn,
     "SELECT *
      FROM orders
-     WHERE id=? AND user_id=?
+     WHERE id=?
      LIMIT 1"
 );
 
-$userId = (int) $_SESSION['user_id'];
-
-mysqli_stmt_bind_param(
-    $orderStmt,
-    "ii",
-    $id,
-    $userId
-);
+mysqli_stmt_bind_param($orderStmt, "i", $id);
 
 mysqli_stmt_execute($orderStmt);
 
@@ -41,10 +69,10 @@ $order = mysqli_fetch_assoc(
 
 mysqli_stmt_close($orderStmt);
 
-    if (!$order) {
-        flash('danger', 'Order not found.');
-        redirect('orders.php');
-    }
+if (!$order) {
+    flash('danger', 'Order not found.');
+    redirect('orders.php');
+}
 
     $payment = mysqli_fetch_assoc(
         mysqli_query(
@@ -243,7 +271,6 @@ $orders = fetch_all(
     $conn,
     "SELECT *
      FROM orders
-     WHERE user_id=$userId
      ORDER BY created_at DESC"
 );
     ?>
@@ -393,11 +420,11 @@ $orders = fetch_all(
 
                             <?php else: ?>
 
-                                <a href="orders.php?id=<?php echo $o['id']; ?>" class="btn btn-sm btn-gold">
+                                <a href="orders.php?id=<?php echo (int) $o['id']; ?>"
+                                    class="btn btn-sm btn-gold">
 
-                                    <i class="bi bi-eye-fill"></i>
-
-                                    View Details
+                                        <i class="bi bi-eye-fill"></i>
+                                        View Details
 
                                 </a>
 
