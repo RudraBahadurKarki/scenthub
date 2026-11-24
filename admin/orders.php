@@ -1,5 +1,6 @@
 <?php
 require_once 'includes/auth.php';
+require_once __DIR__ . '/../config/db.php';
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $page_title = 'Orders';
 
